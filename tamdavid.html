@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+
+    <title>David Tam</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="name">
+    <script src="name"></script>
+
+    <!--navigation bar-->
+    <div class="topnav" >
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">Work Experience</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!--body styling-->
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            background-color: rgb(222,222,222);
+            color: rgb (255,255,255);}
+
+        /*Navigation Bar:*/
+        .topnav {
+            background-color: black;
+            overflow: hidden;
+        }
+        .topnav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            background-color: rgb(222, 222, 222);
+            color: black;
+        }
+        .topnav a.active {
+            background-color: rgb(106, 145, 166);
+            color: white;
+        }
+        /*End of Navigation Bar*/
+
+        /*Footer:*/
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(125, 170, 176);
+            color: white;
+            text-align: center;
+        }
+        /*End of Footer*/
+
+        /*Hero Image:*/
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .hero-image{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bckgd.jpg");
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 10%);
+            color: white;
+        }
+        .hero-text button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 10px 25px;
+            color: black;
+            background-color: #ddd;
+            text-align: center;
+            cursor: pointer;
+        }        
+        .hero-text button:hover {
+            background-color: #555;
+            color: white;
+        }
+        /*End of Hero Image*/
+
+        /*About Me Section:*/
+
+        /*End of About Me Section*/
+
+        /*Work Experience Section:*/
+
+        /*End of Work Experience Section*/
+
+        /*Contact Me Form:*/
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        .column button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .column button:hover {
+            background-color: #45a049;
+        }
+        .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /*End of Contact Me Form*/
+           
+
+    </style>
+
+    <!--Hero-->
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 id="home">I am David Tam</h1>
+            <p>And I'm a Student in Software Engineering at Western University</p>
+            <form action="#contact">
+                <button>Contact Me!</button>
+            </form>    
+        </div>
+    </div>
+
+    <p> <br> </p>
+
+    <!--About Me-->
+    <div class="about">
+        <h1 id="about"> <br>About Me </h1>
+        <img id="aboutimage"; src="about.jpg"; width="1008" height="756"/>
+        <p> <br> My name is David Tam, and I'm a 2nd year in Software Engineering at Western University. I graduated from A.B. Lucas 
+            Secondary School in London Ontario, where I gained a passion for computer science and programming. Aside from programming,
+            I enjoy playing video games, playing music, and travelling. In the future, I hope to make an impact in the technological world through 
+            either an innovative new technology or continued service in the industry. </p>
+
+        <p> <br> </p>
+
+    </div>
+
+    <!--Work Experience-->
+    <div class="work">
+        <h1 id="work"> <br>Work Experience </h1>
+
+        <h2> <br>Kumon </h3>
+        <p> During my time at Kumon, I tutored math and English to students between the ages of 3 and 17. </p>
+        <img src="kumon.jpg" width="800" height="400"/>
+
+        <h2> <br>Robarts Research </h4>
+        <p> During my time at Robarts Research, I joined the medical imaging department and trained neural networks in semantic segmentation to analyze MRI scans for needles and other foreign objects. </p>
+        <img src="robarts.jpg" width="880" height="300"/>
+
+        <p> <br> </p>
+
+    </div>
+
+    <!--Contact Me-->
+    <div class="contact">
+
+        <h1 id="contact"> <br>Contact Me </h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="column">
+
+                    <form>
+                        <label>First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label>Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label>Country</label>
+                        <select id="country" name="country">
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <label>Subject</label>
+                        <textarea placeholder="Write something.." style="height:170px"></textarea>
+        
+                        <button onclick='alert("Thanks for Submitting")'>Submit </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <p> <br><br><br><br></p>
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <p>David's Portfolio - Reach out to me on the Contact Page!</p>
+        
+        <form action="#home">
+            <button>Back to Top</button>
+        </form>
+    </div>
+
+</html>
